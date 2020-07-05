@@ -21,7 +21,41 @@
     <div id="form">
         <input type="text" v-model="message3">
         {{ message3 }}
+    <br>
+        <textarea cols="30" rows="10" v-model="textarea"></textarea>
+    <br>
+        <p style="white-space: pre-line;">{{ textarea }}</p>
+    <br>
+        <input type="radio" v-model="radiobutton" value="option1"> Option 1
+    <br>
+        <input type="radio" v-model="radiobutton" value="option2"> Option 2
+    <br><br>
+        Your choice is {{ radiobutton }}
+    <br><br>
+        Choice your favorite programming language
+    <br><br>
+        <select v-model="select" multiple>
+            <option value="" disabled>choice programming language</option>
+            <option value="Javascript">Javascript</option>
+            <option value="php">PHP</option>
+            <option value="c">C</option>
+        </select>
+    <br><br>
+        Your favorite programming languange is {{ select }}
+    <br>
+        <ul>
+            <li v-for="sel in select">{{ sel }}</li>
+        </ul>
     </div>
+
+    <div id="bind">
+            <img v-bind:src="imgFile" width="500px" alt="">
+        <br>
+            <a v-bind:href="link">Link Google</a>
+        <br>
+            <p v-bind:style="styleFont">Color Font</p>
+    </div>
+
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="assets/js/app.js"></script>

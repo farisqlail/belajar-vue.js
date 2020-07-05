@@ -35,6 +35,18 @@ var app = new Vue({
 var form = new Vue({
     el: '#form',
     data: {
-        message3: null
+        message3: '',
+        textarea: '',
+        radiobutton: '',
+        select: []
+    }
+})
+
+var bind = new Vue({
+    el: '#bind',
+    data: {
+        imgFile: 'assets/img/1965420.jpg',
+        link: 'https://google.com',
+        styleFont: 'color: red; font-size: 20px'
     }
 })
