@@ -11,7 +11,16 @@
         <p v-if="show">{{ message }}</p>
         <p v-else="show">{{ message2 }}</p>
 
-        <p>Result from {{ int1 }} + {{ int2 }} = {{ sum }}</p>
+        <p>Result from {{ int1 }} + {{ int2 }} = {{ result }}</p>
+        <button v-on:click="sumProccess">Prosess</button>
+
+        <input type="text" v-model="kilometers">
+        <input type="text" v-model="meters">
+    </div><br>
+
+    <div id="form">
+        <input type="text" v-model="message3">
+        {{ message3 }}
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
