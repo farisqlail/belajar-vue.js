@@ -50,3 +50,98 @@ var bind = new Vue({
         styleFont: 'color: red; font-size: 20px'
     }
 })
+
+var button = new Vue({
+    el: '#button',
+    data: {
+        message: ''
+    },
+    methods: {
+        showAlert: function(){
+            alert('The button has been clicket to call this function');
+        }
+    }
+});
+
+var key = new Vue({
+    el: '#key',
+    data: {
+        message1: ''
+    },
+    methods: {
+        escKey: function() {
+            this.message1 = 'You pressing esc key'
+        }
+    }
+});
+
+var array2 = new Vue({
+    el: '#array2',
+    data: {
+        content: '',
+        vehicles: ['car', 'motorcycle', 'bike']
+    },
+    methods: {
+        addVehicles: function(){
+            this.vehicles.push(this.content);
+            this.content = '';
+        },
+        removeVehicles: function(index){
+            this.vehicles.splice(index,1);
+        }
+    }
+});
+
+var array3 = new Vue({
+    el: '#array3',
+    data: {
+        vehicles: [
+            {type: 'car', brand: 'toyota', color: 'red'},
+            {type: 'motorcycle', brand: 'yamaha', color: 'blue'},
+            {type: 'bike', brand: 'polygon', color: 'orange'}
+        ],
+        object: {
+            firstName: 'John',
+            lastName: 'Doe',
+            age: 30
+        }
+    }
+});
+
+Vue.component('greeting', {
+    template: '<b>Hello, Vue! From Component.</b>'
+});
+
+Vue.component('button-counter', {
+    data: function(){
+        return {
+            count: 0
+        }
+    },
+    template: '<button v-on:click="count++">you click me{{ times }} clicked</button>'
+});
+
+var component = new Vue({
+    el: '#component',
+});
+
+Vue.component('blog-post', {
+    props: ['post'],
+    template: 
+    `
+        <div>
+            <h3>{{ post.title }}</h3>
+            <div v-html="post.content"></div>
+        </div>
+    `
+})
+
+var component1 = new Vue({
+    el: '#component1',
+    data: {
+        posts: [
+            {id: 1, title: 'My journey with vue', content: 'fisrt data'},
+            {id: 2, title: 'Blogging with vue', content: 'second data'}        
+        ]
+    }
+})
