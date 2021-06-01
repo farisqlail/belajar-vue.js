@@ -15,8 +15,8 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav text-white">
-                    <router-link class="nav-link" aria-current="page" exact to="/">Home</router-link>
-                    <router-link class="nav-link" to="/about">About</router-link>
+                    <router-link class="nav-link" aria-current="page" exact :to="{ name: 'home' }">Home</router-link>
+                    <router-link class="nav-link" :to="{ name: 'pages.about'}">About</router-link>
                 </div>
             </div>
         </div>

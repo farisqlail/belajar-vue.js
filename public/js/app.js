@@ -1895,6 +1895,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   mounted: function mounted() {
     console.log("View mounted.");
@@ -1914,6 +1916,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+//
+//
 //
 //
 //
@@ -20428,14 +20432,21 @@ var render = function() {
                     "router-link",
                     {
                       staticClass: "nav-link",
-                      attrs: { "aria-current": "page", exact: "", to: "/" }
+                      attrs: {
+                        "aria-current": "page",
+                        exact: "",
+                        to: { name: "home" }
+                      }
                     },
                     [_vm._v("Home")]
                   ),
                   _vm._v(" "),
                   _c(
                     "router-link",
-                    { staticClass: "nav-link", attrs: { to: "/about" } },
+                    {
+                      staticClass: "nav-link",
+                      attrs: { to: { name: "pages.about" } }
+                    },
                     [_vm._v("About")]
                   )
                 ],
@@ -20493,9 +20504,20 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [_vm._v("\n    Home Page\n")])
+  return _vm._m(0)
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [
+      _c("div", { staticClass: "container" }, [
+        _vm._v("\n      About Page\n    ")
+      ])
+    ])
+  }
+]
 render._withStripped = true
 
 
@@ -20518,9 +20540,20 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [_vm._v("\n    About Page\n")])
+  return _vm._m(0)
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [
+      _c("div", { staticClass: "container" }, [
+        _vm._v("\n      Home Page\n    ")
+      ])
+    ])
+  }
+]
 render._withStripped = true
 
 
