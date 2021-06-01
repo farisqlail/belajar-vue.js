@@ -1,5 +1,6 @@
 import Home from '../views/Home'
 import About from '../views/About'
+import NewNotes from '../views/notes/Create'
 
 export default {
     mode: 'history',
@@ -15,6 +16,12 @@ export default {
             path: '/about',
             name: 'pages.about',
             component: About
+        },
+
+        {
+            path: '/notes/create',
+            name: 'notes.create',
+            component: NewNotes
         },
     ]
 }
